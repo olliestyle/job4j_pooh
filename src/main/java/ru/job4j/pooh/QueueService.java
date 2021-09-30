@@ -17,8 +17,8 @@ public class QueueService implements Service {
                 text = "There are no queues at all";
                 status = 404;
             } else if (map.get(req.queue()) == null) {
-                   status = 404;
-                   text = "There are no queue with name " + req.queue();
+                status = 404;
+                text = "There are no queue with name " + req.queue();
             } else if (map.get(req.queue()).isEmpty()) {
                 text = "Queue: " + req.queue() + " is empty";
             } else {
